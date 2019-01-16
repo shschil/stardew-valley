@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<title>Stardew Valley</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Arial", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+  background-image: url("https://imgur.com/xUTT6zO.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body {
+  background-image: url("https://imgur.com/xUTT6zO.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.w3-twothird {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+p.opaque {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+h4.opaque {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.w3-button {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+nav.opaque {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+table, th, td {
+    border: 1px solid black;
+    /*border-collapse: collapse;*/
+}
+
+#townhall {
+  width: 50%;
+  margin : 0 auto;
+  bottom: 0 auto;
+}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item">Stardew Valley Basic Guide</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item opaque"><b>Navigation</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/intro.html">Introduction</a>
+  <button onclick="myFunction('Basics')" class="w3-button w3-bar-item w3-left-align w3-hover-white">Basics</button>
+
+<div id="Basics" class="w3-hide">
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#player">[Player]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#controls">[Controls]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#inventory">[Inventory]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#health">[Health]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#stamina">[Stamina]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#skills">[Skills]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#daycycle">[Day Cycle]</a>
+</div>
+<button onclick="myFunction('Farm')" class="w3-button w3-bar-item w3-left-align w3-hover-white">The Farm</button>
+
+<div id="Farm" class="w3-hide">
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#intro">[Overview]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#maps">[Farm Maps]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#farmhouse">[Farmhouse]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#crops">[Crops]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#buildings">[Buildings]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#cave">[Cave]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#greenhouse">[Greenhouse]</a>
+</div>
+<button onclick="myFunction('Valley')" class="w3-button w3-bar-item w3-left-align w3-hover-white">The Valley</button>
+
+<div id="Valley" class="w3-hide">
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#intro">[Overview]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#pelicantown">[Pelican Town]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#beach">[The Beach]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#cindersapforest">[Cindersap Forest]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#mountains">[The Mountains]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#railroad">[The Railroad]</a>
+</div>
+  <!-- <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/story.html">Story</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/villagers.html">Villagers</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/relationships.html">Marriage</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/events.html">Events</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/misc.html">Misc</a>  -->
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/credit.html">Project Credits</a>
+
+  <div id = "div-wrapper">
+    <div id = "townhall"<img src= "https://imgur.com/Np8jvg1.png"> </div>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64" id = "player">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">The Player</h1>
+      <p>The <b>Player</b> is the playable character that you control within <i>Stardew Valley</i>.</p>
+
+      <h4 class="w3-text-black w3-border-bottom">Player Customization</h4>
+      <p>The following options are avaliable to choose from at the beginning of a new game:</p>
+      <ul>
+        <li><b>Appearance</b>: There are 24 skin tones, 32 hair styles, 20 accessories, and 112 shirts to choose from. All of these options can by used by either gender,
+        has no effect on gameplay, can be changed later, and can be altered with hats and boots obtained later on in the game. The color of the Player's <i>Eyes</i>, <i>Hair</i>, and <i>Pants</i> can be changed using either
+        the sliders, or inputting RGB values. There is also a randomizer option that will generate a completely random character by clicking the die located on the upper left hand corner.</li>
+        <li><b>Player Name / Farm Name</b>: These are limited to most ASCII printible characters, which are spaces, uppercase and lowercase letters, numbers, and `~!@#$%^&*()-_=+{}|[]\;:'",./<>?. The length of the
+         name is determined by the total pixel width, and the allowed maximum is restricted to the width of the text box. Player name and Farm Name are sometimes used in dialogue with characters.</li>
+        <li><b>Animal Preference</b>: This determines the type of pet (dog or cat) that will show up on your farm Sping 12, Year 1.</li>
+        <li><b>Favorite Thing</b>: This affects the text describing what a Stardrop fruit tastes like. The character limits are the same as the Player Name / Farm Name text boxes.</li>
+        <li><b>Gender</b>: There are only the options for male and female. This has minor effects on gameplay:</li>
+          <ul>
+            <li><p>Characters will use the appropriate pronoun in dialogue.</p></li>
+            <li><p>Restirction to the men's or women's spa entrance.<p></li>
+            <li><p>Regardless of gender, you can marry all eligble NPC characters. In a same-gender marriage, the children can be adopted. In a different-gender marriage, the woman can become pregnant and give birth to a child.</p></li>
+          </ul>
+      </ul>
+
+      <p><center><a href = "https://shschil.people.clemson.edu/final/basics.html#player">[return to top of section]</a></center></p>
+      </div>
+
+      <div class="w3-third w3-container">
+        <img src = "https://shschil.people.clemson.edu/final/assets/Character_creation_menu.png" alt = "Character Menu" class = "w3-image">
+      </div>
+
+    </div>
+
+    <div class="w3-row w3-padding-64" id = "controls">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Controls</h1>
+        <p>All controls can be reassigned by opening the menu and choosing the Options tab. All controls outlined here are the default settings.</p>
+
+        <h4 class="w3-text-black w3-border-bottom">PC / Mac</h4>
+          <table style = "width:100%">
+            <tr>
+              <th>Key</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>W, A, S, D</td>
+              <td> W = Move up, A = Move left, S = Move down, D = Move right</td>
+            </tr>
+            <tr>
+              <td>Left Click, C</td>
+              <td>Use tool or place held item</td>
+            </tr>
+            <tr>
+              <td>Right Click, X</td>
+              <td>Do action</td>
+            </tr>
+            <tr>
+              <td>Escape, E</td>
+              <td>Open/Close menu</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>Open/Close journal</td>
+            </tr>
+            <tr>
+              <td>M</td>
+              <td>Open/Close map</td>
+            </tr>
+            <tr>
+              <td>Left Shift</td>
+              <td>Run</td>
+            </tr>
+            <tr>
+              <td>1 - 0, -, +</td>
+              <td>Inventory keys</td>
+            </tr>
+            <tr>
+              <td>F4</td>
+              <td>Used to enter screenshot mode</td>
+            </tr>
+          </table>
+
+
+        <h4 class="w3-text-black w3-border-bottom">Xbox 360 / Xbox One</h4>
+          <center><img src = "https://shschil.people.clemson.edu/final/assets/XboxControllerMap.png"></center>
+        <h4 class="w3-text-black w3-border-bottom">Playstation 4</h4>
+          <center><img src = "https://shschil.people.clemson.edu/final/assets/PS4ControllerMap.png"></center>
+        <h4 class="w3-text-black w3-border-bottom">Switch</h4>
+          <center><img src = "https://shschil.people.clemson.edu/final/assets/SwitchControllerMap.png"></center>
+
+        <p><center><a href = "https://shschil.people.clemson.edu/final/basics.html#controls">[return to top of section]</a></center></p>
+
+        </div>
+      </div>
+
+      <div class="w3-row w3-padding-64" id = "inventory">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">Inventory</h1>
+          <p>The <b>Inventory</b> consists of the contents of the Player's backpack. Its slots provide the Player with immediate access to certain items and travels with the Player around the map.</p>
+
+          <p>The Player has immediate access to only the 12 slots on the upper row of the inventory screen when interacting with objects or villagers on the map. These 12 slots are the entire inventory at the beginning of the game.
+          Extra slots are added by upgrading the backpack, but do not grant the same access. They simply add to the number of items that the Player can take with them.</p>
+
+          <p>To gain immediate access, items must be moved from the lower row(s) into the uppermost row. This action is avaliable from the <b>Inventory Menu</b>, accessed by pressing the 'Esc' or 'E' buttons. This menu displays the entire
+          contents of the Player's backpack, and gives the Player the means to move items around inside of the pack while also pausing the game's clock.</p>
+
+          <h4 class="w3-text-black w3-border-bottom">Inventory Screen</h4>
+
+          <p></p>
+
+            <img src = "https://shschil.people.clemson.edu/final/assets/Inventorylabelled.png" class = "w3-image">
+
+            <p></p>
+
+            <center><p><b>1</b>: This is the menu selection bar. Shown from left to right is the tab for <i>Inventory</i>, <i>Player Information</i>, <i>Relationships</i>, <i>Map</i>, <i>Crafting</i>, <i>Collections & Achievements</i>, <i>Controls</i>, and <i>Exiting</i>.</p>
+            <p><b>2</b>: This is the actual Player inventory. Here you can arrange your carried items. The first 12 slots are the quick-accessed inventory, available outside of this screen.</p>
+            <p><b>3</b>: This is the progress of either the <a href = "https://shschil.people.clemson.edu/final/valley.html#pelicantown">Community Center</a> or the <a href = "https://shschil.people.clemson.edu/final/valley.html#pelicantown">Joja Warehouse</a>.</p>
+            <p><b>4</b>: This is for auto-sorting your inventory.</p>
+            <p><b>5</b>: This is the trash can, for deleting unneeded items.</p>
+            <p><b>6</b>: These are the names of your pet and your steed.</p>
+            <p><b>7</b>: This is the basic information of your farm.</p>
+            <p><b>8</b>: This is your Player Character.</p>
+            <p><b>9</b>: This is your Player name.</p>
+            <p><b>10</b>: This is your current equipment, broken down into Hat, Accessory, Second Accessory, and Boots.</p>
+            </center>
+
+          <h4 class="w3-text-black w3-border-bottom">Inventory Upgrades</h4>
+
+          <p>The backpack initially has 12 slots, but you can upgrade it for a total of 36 slots. The upgraded backpacks are available immediately at the start of the game, and can be purchsed from <a href = "https://shschil.people.clemson.edu/final/valley.html#pelicantown">Pierre's General Store</a>.</p>
+
+          <p>The "Large Pack" expands the <b>Inventory</b> to 24 slots and costs 2,000g. The "Deluxe Pack" expands the <b>Inventory</b> to the full 36 slots and costs 10,000g.</p>
+
+          <p><center><a href = "https://shschil.people.clemson.edu/final/basics.html#daycycle">[return to top of section]</a></center></p>
+
+          </div>
+
+        </div>
+
+
+      <div class="w3-row w3-padding-64" id = "health">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">Health</h1>
+          <p><b>Health</b> is measured by the bar next to the Player's <a href = "https://shschil.people.clemson.edu/final/basics.html#stamina">Stamina</a> bar in the bottom right corner of the
+          screen. The health bar is only visible inside of <a href = "https://shschil.people.clemson.edu/final/valley.html#moutains">The Mines</a> or when the health bar is not full. Outside of <a href = "https://shschil.people.clemson.edu/final/valley.html#moutains">The Mines</a>, the ways to lose <b>Health</b> are by getting hit by the train on the Railroad Tracks,
+          or being attacked by the Slimes in the <a href = "https://shschil.people.clemson.edu/final/valley.html#cindersapforest">Secret Woods</a> or in the <a href = "https://shschil.people.clemson.edu/final/farm.html#buildings">Slime Hutch</a>.</p>
+
+          <p>If the Wilderness Map is chosen at the creation of a new game, monsters will be enabled on the Player's <a href = "https://shschil.people.clemson.edu/final/farm.html">Farm</a>. These monsters will attack and drain the Player's <b>Health</b>.</p>
+
+          <p><b>Health</b> can be replenished by either eating food, sleeping, using the <a href = "https://shschil.people.clemson.edu/final/valley.html#railroad">Spa</a>, or eating Stardops. The maximum capacity for the Player's <b>Health</b> is increased by 5 for each level of Combat skill gained, and can be even further enhanced by taking the Fighter and Defender professions in the Combat skill tree.</p>
+
+          <p>Once the Player's <b>Health</b> reaches 0, the Player will pass out. The Player will be woken up by Clint, Linus, Maru, Robin, or Harvey, depending on who the Player has the highest friendship with. Depending on who wakes the Player up, the Player will be woken up in the entry room of <a href = "https://shschil.people.clemson.edu/final/valley.html#moutains">The Mines</a>, the Player's <a href = "https://shschil.people.clemson.edu/final/farm.html#farmhouse">Farmhouse</a>, or in Harvey's
+             <a href = "https://shschil.people.clemson.edu/final/valley.html#pelicantown">Clinic</a>.</p>
+
+          <p>When knocked out, the Player will lose money, items, and knowledge of levels in <a href = "https://shschil.people.clemson.edu/final/valley.html#moutains">The Mines</a>. Items and money that have been lost are non-retrievable. The amount of money lost is defined by the Player's held assets at the time of their unconciousness, with 5000g being the max amount that can be lost.</p>
+
+          <p><center><a href = "https://shschil.people.clemson.edu/final/basics.html#health">[return to top of section]</a></center></p>
+
+          </div>
+
+          <div class="w3-third w3-container">
+            <p class="w3-border w3-padding-large w3-padding-32 w3-center opaque"><img src = "https://shschil.people.clemson.edu/final/assets/Healthbar.png" alt = "Health Bar" class = "w3-image"></p>
+          </div>
+
+        </div>
+
+        <div class="w3-row w3-padding-64" id = "stamina">
+          <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Stamina</h1>
+            <p><b>Stamina</b> is measured by the bar next to the Player's <a href = "https://shschil.people.clemson.edu/final/basics.html#health">Health</a> bar in the bottom right corner of the
+            screen. <b>Stamina</b> is consumed by using tools, fishing, combat, or eating negative energy food. <b>Stamina</b> is replenished by eating good or standing in the Spa. If the player is <i>exhausted</i>, restoration effects are cut in half.
+            Eating a Stardrop will permanently increase maximum <b>Stamina</b> by 34 points.</p>
+
+            <p>The Player will become <i>exhausted</i> when their <b>Stamina</b> drops to 0 or below. At this point, the Player will be unable to run. Eating food will enable the Player to run again, but the <i>exhaustion</i> indicator will remain for the rest of the day.
+            Continuing to do <b>Stamina</b> consuming activities will make the Player pass out, therefore ending the day.</p>
+
+            <p>Consuming Muscle Remedy will remove the <i>exhaustion</i> indicator. If a Player is Married, kissing their spouse will also remove the <i>exhaustion</i> indicator. (Note: This will only work for the first kiss of the day.)</p>
+
+            <p>To consume food and regain <b>Stamina</b>, put the food item on the top row of the Inventory, and right-click it. A notification in the bottom left of the screen will display <b>Stamina</b> and <b>Health</b> gained by eating the food.</p>
+
+            <p>Sleeping at the end of the day will fully restore the Player's <b>Stamina</b> bar. If the Player passes out or is <i>exhausted</i> when they go to bed, they will wake up in the morning with roughly 50%-70% energy. If the player passes out and is found by a Joja Team Member,
+            a medical team will be summoned and the player will be charged 1,000g for the service.</p>
+
+            <p>The Player starts the game with 270 <b>Stamina</b> points. Up to a maximum of 508 <b>Stamina</b> points can be achieved by eating every Stardop. There are certain foods that can temporarily increase the Player's maximum <b>Stamina</b>.</p>
+
+            <p><center><a href = "https://shschil.people.clemson.edu/final/basics.html#stamina">[return to top of section]</a></center></p>
+
+            </div>
+
+            <div class="w3-third w3-container">
+              <p class="w3-border w3-padding-large w3-padding-32 w3-center opaque"><img src = "https://shschil.people.clemson.edu/final/assets/Healthbar.png" alt = "Health Bar" class = "w3-image"></p>
+            </div>
+
+            <div class="w3-third w3-container">
+              <p class="w3-border w3-padding-large w3-padding-32 w3-center opaque"><img src = "https://shschil.people.clemson.edu/final/assets/Exhausted.png" alt = "Exhausted" class = "w3-image"></p>
+            </div>
+
+          </div>
+
+          <div class="w3-row w3-padding-64" id = "skills">
+            <div class="w3-twothird w3-container">
+              <h1 class="w3-text-teal">Skills</h1>
+              <p><b>Skills</b> are player attributes which are leveled up through the use of specific tools, or doing specific actions. Increasing a <b>Skill</b> will increase the
+              proficiency of certain tools, and unlock new and unique crafting recipes. (Note: Any crafting recipe learned through leveling up will not be accessible until after your next save or the following day.)</p>
+
+              <p>Each <b>Skill</b> has 10 levels, and at level 5 and level 10 the Player will select 1 of 2 possible <i>Professions</i> to specialize in. These <i>Professions</i> take effect immediately.</p>
+
+              <center><table>
+                <tr>
+                  <th>Level</th>
+                  <th>Experience</th>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <th>100</th>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <th>380</th>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <th>770</th>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <th>1300</th>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <th>2150</th>
+                </tr>
+                <tr>
+                  <th>6</th>
+                  <th>3300</th>
+                </tr>
+                <tr>
+                  <th>7</th>
+                  <th>4800</th>
+                </tr>
+                <tr>
+                  <th>8</th>
+                  <th>6900</th>
+                </tr>
+                <tr>
+                  <th>9</th>
+                  <th>10,000</th>
+                </tr>
+                <tr>
+                  <th>10</th>
+                  <th>15,000</th>
+                </tr>
+              </table></center>
+
+              <p><b>Skills</b> can be viewed in the Player skill tab in the game pause menu.</p>
+
+              <table style = "text-align: left">
+                <tr>
+                  <th>Farming</th>
+                  <th>Each level grants +1 proficiency to the hoe and watering can tools. Levels are gained by harvesting crops and caring for animals.</th>
+                </tr>
+                <tr>
+                  <th>Mining</th>
+                  <th>Each level adds +1 to pickaxe proficiency. Levels are gained by breaking rocks (normally done with a pickaxe tool).</th>
+                </tr>
+                <tr>
+                  <th>Foraging</th>
+                  <th>Each level adds +1 axe proficiency. Levels are gained by gathering foragable items, and chopping down trees with an axe tool.</th>
+                </tr>
+                <tr>
+                  <th>Fishing</th>
+                  <th>Each level adds +1 fishing rod proficiency. Levels are gained by successfully catching a fish with a fishing rod tool, or catching fish in a crab pot.</th>
+                </tr>
+                <tr>
+                  <th>Combat</th>
+                  <th>Each level adds +5 <a href = "https://shschil.people.clemson.edu/final/basics.html#health">Health</a> points. Tied to the Player's ability to fight against monsters.</th>
+                </tr>
+              </table>
+
+              <h4 class="w3-text-black w3-border-bottom">Proficiency</h4>
+              <p><b>Skill</b> proficiency affects the amount of <b>Stamina</b> required to use specific tools. As proficiency increases, <b>Stamina</b> requirements decrease by 0.1 points.</p>
+
+              <p>The Pickaxe, Axe, Hoe, and Watering Can each use 2 <b>Stamina</b>. The Fishing Rod uses 8 <b>Stamina</b>. Powering up the Watering Can increases its cost by 2 <b>Stamina</b> per level, with a maximum cost of 10 <b>Stamina</b>
+              using a fully-charged iridium watering can.</p>
+
+              <h6 class="w3-text-black"><b>Affected Tools</b></h6>
+              <p><i>Farming:</i></p>
+              <ul>
+                <li>
+                  Hoe
+                </li>
+                <li>
+                  Watering Can
+                </li>
+              </ul>
+
+              <p><i>Foraging:</i></p>
+              <ul>
+                <li>
+                  Axe
+                </li>
+              </ul>
+
+              <p><i>Fishing:</i></p>
+              <ul>
+                <li>
+                  Fishing Rod
+                </li>
+                <li>
+                  Crab Pot
+                </li>
+              </ul>
+
+              <p><i>Mining:</i></p>
+              <ul>
+                <li>
+                  Pickaxe
+                </li>
+              </ul>
+
+              <h6 class="w3-text-black"><b>Unaffected Tools</b></h6>
+              <p>The following tools do not consume any <b>Stamina</b></p>
+              <ul>
+                <li>
+                  Swords
+                </li>
+                <li>
+                  Hammers
+                </li>
+                <li>
+                  Daggers
+                </li>
+                <li>
+                  Slingshots
+                </li>
+                <li>
+                  Scythe
+                </li>
+              </ul>
+
+              <p>The following tools always consume 4 points of <b>Stamina</b>:</p>
+              <ul>
+                <li>
+                  Milk Pail
+                </li>
+                <li>
+                  Shears
+                </li>
+              </ul>
+
+              <div id = "farming">
+                <h4 class="w3-text-black w3-border-bottom">Farming</h4>
+
+              <p><i>Farming</i> <b>Skill</b> is gained by harvesting crops and caring for animals: Petting, milking, and shearing farm animals or picking up an animal product inside a barn of coop each gives 5 experience points.
+              Hoe and Watering Can usage does not give experience by itself. Each level gives +1 proficiency to the Hoe and Watering Can tools.</p>
+
+              </div>
+
+              <div id = "mining">
+                <h4 class="w3-text-black w3-border-bottom">Mining</h4>
+
+              <p><i>Mining</i> <b>Skill</b> is gained by breaking rocks. You are awarded <i>mining</i> <b>Skill</b> points when rocks are destroyed. It does not matter if this is done by Pickaxe, Bombs, or by the actions of monsters. Each level gives +1 proficiency to the Pickaxe tool.</p>
+
+              <p>Different types of rocks give different numbers of experience points.</p>
+
+              </div>
+
+              <div id = "foraging">
+                <h4 class="w3-text-black w3-border-bottom">Foraging</h4>
+
+              <p><i>Foraging</i> <b>Skill</b> is gained by both gathering forage items found on the ground throughout Stardew Valley and by chopping down trees with an Axe. Each level gives +1 proficiency to the Axe tool.</p>
+
+              <p>Chopping down a tree gives 12 <i>foraging</i> experience points. (Note: The experience points are granted all at once when the tree falls over.) Removing large stumps and large logs gives 25 experience points.
+              Removing regular tree stumps gives no experience points.</p>
+
+              <p>Forage crops gown on the <a href = "https://shschil.people.clemson.edu/final/farm.html">Farm</a> give 3 experience points when harvested. Spring Onions that grow in <a href = "https://shschil.people.clemson.edu/final/valley.html#cindersapforest">Cindersap Forest</a> south of <a href = "https://shschil.people.clemson.edu/final/valley.html#leahscottage">Leah's Cottage</a> also give 3 experience points when harvested.</p>
+
+              <p>Picking up forage items around town gives 7 experience points, along with picking up a truffle on the farm.</p>
+
+              </div>
+
+              <div id = "fishing">
+                <h4 class="w3-text-black w3-border-bottom">Fishing</h4>
+
+              <p><i>Fishing</i> <b>Skill</b> is gained by catching Fish or Trash with a Fishing Rod, or by harvesting Crab Pots. Each level gives +1 proficiency to the Fishing Rod tool. Along with proficiency, each level increases the minimum fish size and bobber bar height, while decreasing the max amount of time before fish bite. <i>Fishing</i> <b>Skill</b> also increases the change to find quality (silver or gold star) fish.</p>
+
+              </div>
+
+              <div id = "combat">
+                <h4 class="w3-text-black w3-border-bottom">Combat</h4>
+
+              <p><i>Combat</i> <b>Skill</b> is gained by fighting monsters. Each level gives +5 health points.</p>
+
+              </div>
+
+              <p><center><a href = "https://shschil.people.clemson.edu/final/basics.html#skills">[return to top of section]</a></center></p>
+
+              </div>
+            </div>
+
+
+            <div class="w3-row w3-padding-64" id = "daycycle">
+              <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal">Day Cycle</h1>
+                <p>The <b>Day Cycle</b> is a period of 18 hours in-game (or 13.5 minutes real-time; one in-game hour is 45 seconds) from 6:00 AM to 12:00 AM. Past midnight, the Player's character becomes tired and in need of sleep. However, the Player can
+                stay awake until 2:00 AM, after which the Player will pass out.</p>
+
+                <p>If the Player passes out, they will wake up in their bed, having been dragged there by either the town's doctor, Harvey, Linus, a JojaMart member, or a JojaMart doctor. In each case, some of the Player's money will be lost and the details of
+                this transaction will appear in a letter in the Player's <a href = "https://shschil.people.clemson.edu/final/farm.html#mailbox"> Mailbox</a>. An exception to this is if the Player passes out inside of their house.</p>
+
+                <p>The game saves only after the Player has gone to bed and the daily profit breakdown has been accepted, commencing the end of the day.</p>
+
+                <p>Sleeping will restore the Player's <a href = "https://shschil.people.clemson.edu/final/basics.html#stamina">Stamina</a> and <a href = "https://shschil.people.clemson.edu/final/basics.html#health">Health</a> to full if they go to bed before 12:00 AM and they
+                are not <i>exhaused</i>, and to half if they pass out or are <i>exhausted</i>. The longer past midnight the Player stays awake, the less <b>Stamina</b> they wake up with (Note: This is regardless of the amount of <b>Stamina</b> they are left with before sleep), with about 50%
+                if the Player sleeps right before 2:00 AM.</p>
+
+                <h4 class="w3-text-black w3-border-bottom">Animal Routines</h4>
+
+                <p>It is considered nighttime after 6:00 PM, which makes it possible to catch night time fish. However, it does not become dark until 8:00 PM.</p>
+
+                <p>Cows, sheep, goats, pigs, chickens, ducks, and rabbits will automattically go inside their <a href = "https://shschil.people.clemson.edu/final/farm.html#buildings">coop</a> or <a href = "https://shschil.people.clemson.edu/final/basics.html#buildings">barn</a> at 6:00 PM, and will start going to sleep at 7:00 PM. They will stop moving around at 8:00 PM. After 8:00 PM, animals can no longer be moved around by walking their Player character
+                into them.</p>
+
+                <p><center><a href = "https://shschil.people.clemson.edu/final/basics.html#daycycle">[return to top of section]</a></center></p>
+
+                </div>
+
+                <div class="w3-third w3-container">
+                  <p class="w3-border w3-padding-large w3-padding-32 w3-center opaque"><img src = "https://shschil.people.clemson.edu/final/assets/Clock.png" alt = "Clock" class = "w3-image"></p>
+                </div>
+
+              </div>
+
+
+    </div>
+
+  <!-- Pagination
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div>
+!-->
+
+  <!-- <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer> -->
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

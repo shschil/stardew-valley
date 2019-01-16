@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<title>Stardew Valley</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Arial", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+  background-image: url("https://imgur.com/xUTT6zO.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body {
+  background-image: url("https://imgur.com/xUTT6zO.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.w3-twothird {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+p.opaque {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+h4.opaque {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.w3-button {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+nav.opaque {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.intro_img {
+    height:400px;
+    width:400px;
+  }
+
+  .intro_img>img {
+    max-height:400px;
+    max-width:400px;
+    display:block;
+    margin:0 auto;
+}
+
+.val_img {
+    height:350px;
+    width:250px;
+  }
+
+  .val_img>img {
+    max-height:350px;
+    max-width:250px;
+    display:block;
+    margin:0 auto;
+}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item">Stardew Valley Guide</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item opaque"><b>Navigation</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/intro.html">Introduction</a>
+  <button onclick="myFunction('Basics')" class="w3-button w3-bar-item w3-left-align w3-hover-white">Basics</button>
+
+<div id="Basics" class="w3-hide">
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#player">[Player]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#controls">[Controls]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#inventory">[Inventory]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#health">[Health]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#stamina">[Stamina]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#skills">[Skills]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#daycycle">[Day Cycle]</a>
+</div>
+<button onclick="myFunction('Farm')" class="w3-button w3-bar-item w3-left-align w3-hover-white">The Farm</button>
+
+<div id="Farm" class="w3-hide">
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#intro">[Overview]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#maps">[Farm Maps]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#farmhouse">[Farmhouse]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#crops">[Crops]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#buildings">[Buildings]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#cave">[Cave]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#greenhouse">[Greenhouse]</a>
+</div>
+<button onclick="myFunction('Valley')" class="w3-button w3-bar-item w3-left-align w3-hover-white">The Valley</button>
+
+<div id="Valley" class="w3-hide">
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#intro">[Overview]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#pelicantown">[Pelican Town]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#beach">[The Beach]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#cindersapforest">[Cindersap Forest]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#mountains">[The Mountains]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#railroad">[The Railroad]</a>
+</div>
+  <!-- <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/story.html">Story</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/villagers.html">Villagers</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/relationships.html">Relationships</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/events.html">Events</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/misc.html">Misc</a> -->
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/credit.html">Project Credits</a>
+
+  <div id = "div-wrapper">
+    <div id = "townhall"<img src= "https://imgur.com/Np8jvg1.png"> </div>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64" id = "intro">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Overview</h1>
+      <p>Stardew Valley contains a wide range of locations, from mountains to a beach to the most important place, your farm. In this section, we will go over most of the buildings and locations within the Valley.</p>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id = "Pelicantown">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Pelican Town</h1>
+      <p><b>Pelican Town</b> is the town where the Player moves to at the start of the game, located in Stardew Valley. <b>Pelican Town</b> is where most of the villagers live, work, and socialize.</p>
+
+      <p>The northwest entrance to town connects to the Bus Stop, and <a href = "https://shschil.people.clemson.edu/final/farm.html">The Farm</a>. The southwest entrance connects to Cindersap Forest, which contains Marnie's Ranch, Leah's Cottage, and the Wizard's
+      Tower. Directly south of town is The Beach. North of town connects to The Moutain, with the Carpenter's Shop, The Mines, Adventurer's Guild, the Railrood, and the Quarry.</p>
+
+      <center><a href = "https://shschil.people.clemson.edu/final/assets/Town.png" target = "_blank"><img src = "https://shschil.people.clemson.edu/final/assets/Town.png" class = "intro_img"></a></center>
+      <p><center>[click to expand]</center></p>
+
+      <h4 class="w3-text-black w3-border-bottom">Pierre's General Store</h4>
+
+      <p><b>Pierre's General Store</b> is where you can buy various seeds, saplings, fertilizer, and other useful items. After you have 8 friendship hearts with a marrigeable villager, a bouquet of flowers will be available for purchase.
+      You can also sell foraged items, crops, artisan goods, and animal products.</p>
+
+      <p>Some products in stock will vary from season to season, such as seeds.</p>
+
+      <p>At first, <b>Pierre's General Store</b> is closed on Wednesday. However, if you finish all of the <b>Community Center</b> bundles, <b>Pierre's General Store</b> will be open 7 days a week.</p>
+
+      <p>You can enter the building until 9:00PM, but Pierre leaves the sales counter at 5:00PM every day, so you cannot purcahse or sell items after 5:00PM.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/General_Store.png" width = "300px" length = "300px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">Clinc</h4>
+
+      <p><b>Harvey's Clinic</b> is located in the center of <b>Pelican Town</b>, next to <b>Pierre's General Store</b>. Here you can buy Energy Tonic and Muscle Remedy, which restore <a href = "https://shschil.people.clemson.edu/final/basics.html#health">Health</a> and <a href = "https://shschil.people.clemson.edu/final/basics.html#stamina">Stamina</a>.</p>
+
+      <p>Although you can enter the <b>Clinic</b> most says between 9:00AM and 3:00PM, you cannot purchase medical supplies unless Maru or Harvey are behind the supplies counter.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Clinic.png" width = "150px" length = "200px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">Community Center</h4>
+
+      <p>The <b>Community Center</b> is located on the screen north of <b>Pierre's General Store</b>.</p>
+
+      <p>To activate the <b>Community Center</b> Bundles, you must trigger a cut scene with Lewis. Enter <b>Pelican Town</b> from the Bus Stop screen on a sunny day from Spring 5th onward on between 8:00AM and 1:00PM. If you enter town from another direction,
+      time, or on a day that is not sunny, the cut scene will not trigger.</p>
+
+      <p>In the cut scene, Lewis leads you to the <b>Community Center</b>, where you will find creatures called Junimos that fade in and out of existence, along with a glowing placard covered in strange writing. Once you attempt to read the placard, you will receive a letter from the Wizard on the day after and be able to enter his house. Going
+      there triggers a cut scene in which the Wizard talks to you about the Junimos. Consuming the Wizard's potion activates the bundles. You can then return to the <b>Community Center</b> to read the placards, understand them, and give the item bundle offerings to the Junimos.</p>
+
+      <p>Alternatively, the <b>Community Center</b> can become the <b>Joja Warehouse</b> if the Player chooses to purchase a membership from Morris at <b>JojaMart</b>. If the Player does this, the <b>Warehouse</b> building will replace the <b>Community Center</b> and all unlocks are simply purchased with gold instead of item bundles.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Community_Center.png" width = "300px" length = "300px"><img src = "https://shschil.people.clemson.edu/final/assets/Joja_Warehouse.png" width = "300px" length = "300px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">Museum</h4>
+
+      <p>The <b>Museum</b> can be found in the south-east corner of Pelican Town, south of the <b>Blacksmith</b>.</p>
+
+      <p>The <b>Museum</b> consists of a library with an attached gallery for displaying the <b>Museum's</b> collection. At the start of the game, the entire collection is empty. The Player may donate artifacts and books dug up from their farm or the mines in exchange for rewards.</p>
+
+      <p>Penny holds lessons for the towns children, Vincent and Jas, within the library on Tuesdays, Wednesdays, and Fridays.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Museumfixed.png" width = "250" length = "250"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">Blacksmith</h4>
+
+      <p>The <b>Blacksmith</b> serves as a location for purchasing coal and ores (copper, iron, and gold), upgrading tools, and breaking open geodes. It also is the home of blacksmith Clint.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Blacksmith.png" width = "300px" length = "300px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">JojaMart</h4>
+
+      <p>Buying a Membership at <b>JojaMart</b> from Morris for 5,000 gold causes the <b>Community Center</b> to be destroyed and replaced with a <b>Joja Warehouse</b>. The Player can then buy the town refubishments through <b>JojaMart</b>, rather than through competing item bundles in the <b>Community Center</b>.
+      It should be noted that this alternate branch in gameplay encourages a very different, money-driven playstyle than the exploration one offered through improving the <b>Community Center</b>; rather than requiring a variety of items from different seasons to complete item bundles,
+      large sums of gold are paid upfront for improvements.</p>
+
+      <p><b>JojaMart</b> offers brand products at a relatively cheap price, but sells seeds at ludicrous prices.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Jojamart.png" width = "300px" length = "300px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">The Stardrop Saloon</h4>
+
+      <p><b>The Stardrop Saloon</b> is owned by Gus, and is located in the center of <b>Pelican Town</b>. It's a meeting place for many villagers, and hosts a variety of entertainment,including fully-playable arcade machines, a jukebox, and a Joja Cola soda machine.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Saloon.png" width = "300px" length = "300px"></center>
+
+      <p><center><a href = "https://shschil.people.clemson.edu/final/valley.html#pelicantown">[return to top of section]</a>
+
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id = "beach">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">The Beach</h1>
+      <p>The <b>Beach</b> is located to the south of <b>Pelican Town</b>. During the Summer the Luau and Dance of the Moonlight Jellies festivals are held on the beach.</p>
+
+      <center><a href = "http://shschil.people.clemson.edu/final/assets/Beach_Overview.jpg"><img src = "https://shschil.people.clemson.edu/final/assets/Beach_Overview.jpg" width = "500px" length = "500px"></a></center>
+
+      <p><center>[click to expand]</center></p>
+
+      <h4 class="w3-text-black w3-border-bottom">Elliott's Cabin</h4>
+
+      <p><b>Elliott's Cabin</b> is the home of Elliott. It's located directly east when entering the <b>Beach</b>. You cannot enter without first gaining at least two friendship hearts with Elliott.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Elliots_Cabin.png" width = "200px" length = "200px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">Fish Shop</h4>
+
+      <p><b>The Fish Shop</b> is the home of Willy. It is located on the docks of the <b>Beach</b>, south of <b>Pelican Town</b>.</p>
+
+      <p>Willy offers a variety of fishing supplies inside, including rods, bait, tackle, and crab pots. More goods become available as the Player increases their fishing skill by catching fish, with the Iridium Rod
+      being sold as soon as level 6 fishing skill is obtained, without waiting for the next day.</p>
+
+      <p>You can also sell fish or shells to Willy during the daytime when he's behind his counter.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Fish_Shop.png" width = "200px" length = "200px"></center>
+
+      <p><center><a href = "https://shschil.people.clemson.edu/final/valley.html#beach">[return to top of section]</a>
+
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id = "cindersapforest">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Cindersap Forest</h1>
+      <p><b>Cindersap Forest</b> is the area located south of the Player's <a href = "https://shschil.people.clemson.edu/final/farm.html">Farm</a>, and includes the <b>Abandoned House</b>, <b>Leah's Cottage</b>, and <b>Marnie's Ranch</b>. It has exits to the north into the <a href = "https://shschil.people.clemson.edu/final/farm.html">Farm</a>, the east into <b>Pelican Town</b>, south into the sewers, and to the nortwest into the <b>Secret
+      Woods</b>. As expected, <b>Cindersap Forest</b> contains a large variety of trees. These trees behave normally, yet do not need to be re-planted once they have been chopped down. During the start of spring, you can find wild Spring Onions in the dirt spots
+      to the southeast of the map, near the sewers.</b></p>
+
+      <center><a href = "http://shschil.people.clemson.edu/final/assets/CindersapForest.png"><img src = "https://shschil.people.clemson.edu/final/assets/CindersapForest.png" width = "500px" length = "500px"></a></center>
+
+      <p><center>[click to expand]</center></p>
+
+      <h4 class="w3-text-black w3-border-bottom">Marnie's Ranch</h4>
+
+      <p><b>Marnie's Ranch</b> is located in the northeast area of <b>Cindersap Forest</b>, near the southwest entrance to <b>Pelican Town</b>. The <b>Ranch</b> is occupied by Marnie, along with her niece Jas, and nephew Shane.</p>
+
+      <p>Marnie runs her shop from 9:00AM to 4:00PM each day, except Monday and Tuesday. Here you can buy hay for your animals, heaters, milk pails, and shears. <b>Marnie's Ranch</b> is also where you buy your livestock.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Ranch.png" width = "400px" length = "400px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">Leah's Cottage</h4>
+
+      <p><b>Leah's Cottage</b> is the home of Leah. It is located south of the Player's <a href = "https://shschil.people.clemson.edu/final/farm.html">Farm</a> and <b>Marnie's Ranch</b> in the <b>Cindersap Forest</b> area. You cannot enter without first gaining
+      at least two friendship hearts with Leah.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Leahs_Cottage.png" width = "300px" length = "300px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">Abandoned House</h4>
+
+      <p>The <b>Abandoned House</b> is located in the south of <b>Cindersap Forest</b>. A mouse takes over the building and opens a shop there selling hats to the player after the first achievement is acquired. All hats are sold for 1,000 gold. Hats are purely cosmetic. A new
+      hat will appear in the shop whenever an achievement gets unlocked.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Hat_Shop.png" width = "300px" length = "300px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">Secret Woods</h4>
+
+      <p>The <b>Secret Woods</b> is an area that can be entered from the northwest corner of <b>Cindersap Forest</b>, south of the Player's <a href = "https://shschil.people.clemson.edu/final/farm.html">Farm</a>. The entrance is initially blocked by a fallen log that can only be cleanred after
+      upgrading to a Steel Axe.</p>
+
+      <p>The <b>Secret Woods</b> is full of Slimes that will attack the player.</p>
+
+      <p>The <b>Secret Woods</b> contains six stumps that regrow daily that can be harvest for a total of 12 hardwood each day.</p>
+
+      <center><a href = "http://shschil.people.clemson.edu/final/assets/SecretWoods.png"><img src = "https://shschil.people.clemson.edu/final/assets/SecretWoods.png" width = "500px" length = "500px"></a></center>
+
+      <p><center>[click to expand]</center></p>
+
+      <p><center><a href = "https://shschil.people.clemson.edu/final/valley.html#cindersapforest">[return to top of section]</a>
+
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id = "mountains">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">The Mountain</h1>
+      <p>The <b>Mountain</b> is the area located north of <a href = "https://shschil.people.clemson.edu/final/valley.html#pelicantown">Pelican Town</a>. To the west is an exit to the Backwoods, a path that runs from the north of the Player's Farm to the west of the Mountains. Through a pass to the north
+      lies a connecion to the <a href = "https://shschil.people.clemson.edu/final/valley.html#railroad">Railroad</a>.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/mountain.png" width = "500px" length = "500px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">Carpenter's Shop</h4>
+
+      <p>Robin's <b>Carpenter Shop</b> is located in the west area of the <b>Mountain</b>. This is where Robin runs her carpentry business, and where her husband Demetrius and children Maru and Sebatian reside.</p>
+
+      <p>Here is where you can purchase all farm buildings and farm building upgrades, including for the Player's <a href = "https://shschil.people.clemson.edu/final/farm.html#farmhouse">Farmhouse</a>. You can also purchase furniture.</p>
+
+      <p>Robin will begin construction the day after buildings are purchased, but she does not work on festival days. Most construction projects are finished in 2 days.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Carpenters_Shop.png" width = "400px" length = "400px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">Linus's Tent</h4>
+
+      <p><b>Linus's Tent</b> is the home of Linus. It is located northeast of <b>Robin's Carpenter Shop</b>.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Tent.png" width = "200px" length = "300px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">The Mines</h4>
+
+      <p>The <b>Mines</b> are located to the north. The <b>Mines</b> are monster-infested, but also the primary source for stone and ores. There are 120 floors to the <b>Mines</b>, with monster difficulty increasing as the Player descends.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/MinesEntrance.png" width = "300px" length = "300px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">Adventurer's Guild</h4>
+
+      <p>The <b>Adventurer's Guild</b> is located to the right from the entrance to the <b>Mines</b>. Marlon and Gil reside here. Once access is gained, it provides a shop selling weapons, boots, and rings. The Player can also purchase monster parts.</p>
+
+      <p><center><a href = "https://shschil.people.clemson.edu/final/valley.html#mountains">[return to top of section]</a>
+
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id = "railroad">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">The Railroad</h1>
+      <p>The <b>Railroad</b> is located to the north of the <b>Mountain</b>. It becomes accessible after an earthquake occurs on the 3rd of Summer in the first year.</p>
+
+      <p>On random days between 9:00AM and 6:00PM, a train can pass through the area. If the Player is outdoors, a message will appear in the lower right portion of the screen saying "A train is passing through Stardew Valley" accompanied by a train whistle.</p>
+
+      <p>When the train cars pass, items such as Stone, Coal, Iron Ore, Wood, and Geodes may fall off and be picked up. This requires the Player to be present as the train passes.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/railroad.png" width = "500px" length = "500px"></center>
+
+      <h4 class="w3-text-black w3-border-bottom">The Spa</h4>
+
+      <p>In the southwest portion of the Railroad is the <b>Spa</b>. Standing still when in the pool causes energy and health to be restored.</p>
+
+      <center><img src = "https://shschil.people.clemson.edu/final/assets/Spa.png" width = "400px" length = "400px"></center>
+
+      <p><center><a href = "https://shschil.people.clemson.edu/final/valley.html#railroad">[return to top of section]</a>
+
+    </div>
+  </div>
+
+
+  </div>
+
+  <!-- Pagination
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div>
+!-->
+
+  <!-- <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer> -->
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

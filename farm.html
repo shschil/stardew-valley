@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<title>Stardew Valley</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+  background-image: url("https://imgur.com/xUTT6zO.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body {
+  background-image: url("https://imgur.com/xUTT6zO.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.w3-twothird {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.w3-container {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+p.opaque {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+h4.opaque {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.w3-button {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+nav.opaque {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+table, th, td {
+    border: 1px solid black;
+    /*border-collapse: collapse;*/
+}
+
+.map_img {
+    height:250px;
+    width:250px;
+  }
+
+  .map_img>img {
+    max-height:250px;
+    max-width:250px;
+    display:block;
+    margin:0 auto;
+}
+
+.cp_img {
+    height:100px;
+    width:100px;
+  }
+
+  .cp_img>img {
+    max-height:100px;
+    max-width:100px;
+    display:block;
+    margin:0 auto;
+}
+
+#townhall {
+  width: 50%;
+  margin : 0 auto;
+  bottom: 0 auto;
+}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item">Stardew Valley Guide</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item opaque"><b>Navigation</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/intro.html">Introduction</a>
+  <button onclick="myFunction('Basics')" class="w3-button w3-bar-item w3-left-align w3-hover-white">Basics</button>
+
+<div id="Basics" class="w3-hide">
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#player">[Player]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#controls">[Controls]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#inventory">[Inventory]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#health">[Health]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#stamina">[Stamina]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#skills">[Skills]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/basics.html#daycycle">[Day Cycle]</a>
+</div>
+<button onclick="myFunction('Farm')" class="w3-button w3-bar-item w3-left-align w3-hover-white">The Farm</button>
+
+<div id="Farm" class="w3-hide">
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#intro">[Overview]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#maps">[Farm Maps]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#farmhouse">[Farmhouse]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#crops">[Crops]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#buildings">[Buildings]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#cave">[Cave]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/farm.html#greenhouse">[Greenhouse]</a>
+</div>
+<button onclick="myFunction('Valley')" class="w3-button w3-bar-item w3-left-align w3-hover-white">The Valley</button>
+
+<div id="Valley" class="w3-hide">
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#intro">[Overview]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#pelicantown">[Pelican Town]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#beach">[The Beach]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#cindersapforest">[Cindersap Forest]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#mountains">[The Mountains]</a>
+  <a class="w3-button w3-bar-item w3-right-align w3-hover-white w3-small" href="https://shschil.people.clemson.edu/final/valley.html#railroad">[The Railroad]</a>
+</div>
+  <!-- <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/story.html">Story</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/villagers.html">Villagers</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/marriage.html">Marriage</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/events.html">Events</a>
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/misc.html">Misc</a> -->
+  <a class="w3-bar-item w3-button w3-hover-white" href="https://shschil.people.clemson.edu/final/credit.html">Project Credits</a>
+
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64" id = "intro">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Farm Overview</h1>
+
+      <p>Upon completing the Character Creation, you're transported to your Farm. Inherited from your grandfather after quitting your job at Joja Corporation, it is your duty to restore the land and make use of it.</p>
+
+      <p>The main way to make money, and what you will most likely spend the most time on, is the farm that your grandfather has handed down to you.
+        Located in Stardew Valley, your farm is completely customizable from starting maps, names, what crops you choose to raise, and even how you choose
+        to decorate the land.</p>
+
+      <p></p>
+
+      <img src = "https://shschil.people.clemson.edu/final/assets/Map.png" class = "w3-image">
+
+      <p></p>
+
+    </div>
+    <div class="w3-third">
+      <img src = "https://shschil.people.clemson.edu/final/assets/Farm_map_selection.png" alt = "Farm Map Selection" class = "w3-image">
+    </div>
+
+  </div>
+
+  <div class="w3-row w3-padding-64" id = "maps">
+    <div class="w3-container">
+      <h1 class="w3-text-teal">Farm Map</h1>
+      <p>There are five starting maps to choose from when you first begin a game file. The maps all have different high and low points,
+      so there needs to be careful consideration to what kind of play style that you want to have for your farm.</p>
+
+      <p>The Player's farm house will appear the same on all maps from the exterior, but the interior is uniquely styled after the chosen map's theme.</p>
+
+      <p>Each map will change how the farm appears on the game's overworld map slightly. Most simply change how the farm area appeares, but some maps will change areas outside the farm.
+      The Forest farm extends the forest to the west toward the farm and the Riverland map connects to a river which flows south of the Desert.
+      These changes are only shown on the overworld map. No changes are made to the actual Valley outside of the Player's farm.</p>
+
+      <p>After selecting a map, it cannot be changed. Each map takes up the same area, but there are different amounts of usable, farmable, and buildable land on each.</a>
+
+        <table style = "width:100%">
+          <tr>
+            <th>Image (click to enlarge)</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Associated Skill</th>
+          </tr>
+          <tr>
+            <td><a href = "https://shschil.people.clemson.edu/final/assets/Standard_Farm.png" target = "_blank"><img src = "https://shschil.people.clemson.edu/final/assets/Standard_Farm.png" class = "map_img"></a></td>
+            <td>Standard Farm</td>
+            <td><ul><li>The majority of this map is farming land, ideal for crops and animals.</li></ul></td>
+            <td><a href = "https://shschil.people.clemson.edu/final/basics.html#farming">Farming</a></td>
+          </tr>
+          <tr>
+            <td><a href = "https://shschil.people.clemson.edu/final/assets/Riverland_Farm.png" target = "_blank"><img src = "https://shschil.people.clemson.edu/final/assets/Riverland_Farm.png" class = "map_img"></a></td>
+            <td>Riverland Farm</td>
+            <td><ul><li>The majority of this map water, ideal for fishing.</li>
+            <ul><li>The Player can catch the same fish that are found in <a href = "https://shschil.people.clemson.edu/final/valley.html#pelicantown">Pelican Town</a>.</li></ul>
+            <li>Water significantly decreases the amount of farming area.</li></ul></td>
+            <td><a href = "https://shschil.people.clemson.edu/final/basics.html#fishing">Fishing</a></td>
+          </tr>
+          <tr>
+            <td><a href = "https://shschil.people.clemson.edu/final/assets/Forest_Farm.png" target = "_blank"><img src = "https://shschil.people.clemson.edu/final/assets/Forest_Farm.png" class = "map_img"></a></td>
+            <td>Forest Farm</td>
+            <td><ul><li>Many trees are found all around the map.</li>
+              <li>The following items spawn in the west area of the map:</li>
+            <ul><li>Renewable Large Stumps (Hardwood)</li>
+            <li>Seasonal forage items (<a href = "https://shschil.people.clemson.edu/final/valley.html#secretwoods">Secret Woods</a> specific items)</li>
+            <li>Weeds that always drop Mixed Seeds</li></ul>
+            <li>Aditional cliffs and ponds decrease the overall farming area.</li></ul></td>
+            <td><a href = "https://shschil.people.clemson.edu/final/basics.html#foraging">Foraging</a></td>
+          </tr>
+          <tr>
+            <td><a href = "https://shschil.people.clemson.edu/final/assets/Hilltop_Farm.png" target = "_blank"><img src = "https://shschil.people.clemson.edu/final/assets/Hilltop_Farm.png" class = "map_img"></a></td>
+            <td>Hill-top Farm</td>
+            <td><ul><li>A special mining area in the southwest area of the map spawns the following items:</li>
+            <ul><li>Stones</li>
+            <li>Ore Nodes</li>
+            <li>Geode Nodes</li></ul>
+            <p>The type of nodes that spawn is relative to the Player's Mining level.</p>
+            <li>Additional cliffs and a stream decrease the overall farming area.</li></ul></td>
+            <td><a href = "https://shschil.people.clemson.edu/final/basics.html#mining">Mining</a></td>
+          </tr>
+          <tr>
+            <td class = "map_img"><a href = "https://shschil.people.clemson.edu/final/assets/Wilderness_Farm.png" target = "_blank"><img src = "https://shschil.people.clemson.edu/final/assets/Wilderness_Farm.png" class = "map_img"></a></td>
+            <td>Wilderness Farm</td>
+            <td><ul><li>Monsters spawn at night (scales with the Player's Combat level). Wilderness Golems are unique to this map.</li>
+            <li>Addiotnal cliffs and ponds decrease the overall farming area.</ul></td>
+            <td><a href = "https://shschil.people.clemson.edu/final/basics.html#combat">Combat</a></td>
+          </tr>
+        </table>
+
+        <p><center><a href = "https://shschil.people.clemson.edu/final/farm.html#maps">[return to top of section]</a></center></p>
+
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id = "farmhouse">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Farmhouse</h1>
+      <p>The Farmhouse is the Player's house. This is where the Player will end each day by sleeping in the bed within. The Farmhouse is customizable with furniture, flooring, and walpapers. The Farmhouse
+      can be upgraded 3 times, once by paying 10,000 gold and 450 Wood, and again by paying 50,000 gold and 150 hardwood. The final upgrade adds a cellar, which can age wine and cheese. This final upgrade
+      costs 100,000 gold. All Farmhouse upgrades take 2 full days to complete.</p>
+
+      <p>Upon completion of the marriage ceremony, the person that the Player marries will have a portion of their own room moved into the right side of your Farmhouse. This requires a tier 2 Farmhouse.</p>
+
+      <h4 class="w3-text-black w3-border-bottom">Mailbox</h4>
+
+      <p>The Mailbox to the right of your Farmhouse is where you will recieve mail from the residents of Stardew Valley. These can include gifts or recipes, or also contain quests and town messages.</p>
+
+      <h4 class="w3-text-black w3-border-bottom">Shipping Box</h4>
+
+      <p>The Shipping Box is located to the right of the Farmhouse. Items with a coin value can be placed inside the box and will be sold overnight with the earnings from selling the items displayed in a table
+      once the Player goes to bed for the night.</p>
+
+      <p>The latest item placed in the Shipping Box can be recovered, but the items placed before the latest item are lost. For example, if the Player puts in a Jam and then a Corn,
+      the Player can remove the Corn but not the Jam.</p>
+
+      <p><center><a href = "https://shschil.people.clemson.edu/final/farm.html#farmhouse">[return to top of section]</a></center></p>
+
+    </div>
+    <div class="w3-third">
+      <p class="w3-border w3-padding-large w3-center opaque"><img src = "https://shschil.people.clemson.edu/final/assets/House.png"></p>
+    </div>
+    </div>
+
+
+    <div class="w3-row w3-padding-64" id = "crops">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Crops</h1>
+
+        There are many different crops within Stardew Valley for the player to grow and sell.
+
+        <h4 class="w3-text-black w3-border-bottom">Crops</h4>
+
+        <p>Seends for crops can be bought from the General Store, with the selection correlating to the current season, or obtained from completing bundles from the Community Center. Seeds can only be planted on the farm or
+        in the Greenhouse. In order to begin growing a crop, the Player must till a square of dirt with a Hoe. Once tilled, the seed can be placed in the ground, and must be watered once a day with a Watering Can. Once the seed
+        is fully gornw, it may be harvested. Most crops only grow once, and the entire plant is harvested, but for crops like berries and corn, these crops will have their edible portions harvested, allowing the crop to grow again.</p>
+
+        <p>Once the season for a crop has ended, the plant will wither and die overnight and will be dead on the first day of the new season.</p>
+
+        <h4 class="w3-text-black w3-border-bottom">Fruit Trees</h4>
+
+        <p>Fruit Tree seeds can also be bought from the General Store and sowed on the farm in the center of a 3x3 square of land. All fruit trees take 28 days to mature completely, and, depending on the season, will produce 1 fruit per day.
+        Fruit trees do not produce fruit during the winter season.</p>
+
+        <h4 class="w3-text-black w3-border-bottom">Crop Risks</h4>
+
+        <p>Crops have additional risks to dying, such as crows eating the crops overnight, and wilting if the Player fails to water them. The only way crows can be countered is by placing Scarecrows. Scarecrows can be created by crafting.</p>
+
+
+        <p><center><a href = "https://shschil.people.clemson.edu/final/farm.html#farmhouse">[return to top of section]</a></center></p>
+
+      </div>
+      <div class="w3-third">
+        <p class="w3-border w3-padding-large w3-center opaque"><img src = "https://shschil.people.clemson.edu/final/assets/Green_Bean.png"></p>
+        <p class="w3-border w3-padding-large w3-center opaque"><img src = "https://shschil.people.clemson.edu/final/assets/Orange.png"></p>
+      </div>
+    </div>
+
+    <div class="w3-row w3-padding-64" id = "buildings">
+      <div class="w3-container">
+        <h1 class="w3-text-teal">Buildings</h1>
+        <p>Buildings can be purched from the <a href = "https://shschil.people.clemson.edu/final/valley.html#mountains">Carpenter's Shop</a> at varying prices. Farm buildings are required to house aniamls. Both coops and barns have upgrades, but the base building must be purchased before the upgrade. Each of the upgrades allows for the support of more animals.</p>
+
+        <p>The Player can also build Silos, which allow for the collection of Hay, which is needed to feed animals.</p>
+
+        <table style = "width:100%">
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Animals</th>
+            <th>Cost</th>
+          </tr>
+          <tr>
+            <td class="cp_img"><img src = "https://shschil.people.clemson.edu/final/assets/Barn.png"></td>
+            <td>Barn</td>
+            <td>Houses 4 barn-dwelling animals.</td>
+            <td>Cows</td>
+            <td><ul><li>6,000 gold</li><li>350 Wood</li><li>150 Stone</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cp_img"><img src = "https://shschil.people.clemson.edu/final/assets/Big_Barn.png"></td>
+            <td>Big Barn</td>
+            <td>Barn Upgrade
+            <p>Houses 8 barn-dwelling animals. Allows animals to give birth. Unlocks Goats.</p></td>
+            <td>Cows, Goats</td>
+            <td><ul><li>12,000 gold</li><li>450 Wood</li><li>200 Stone</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cp_img"><img src = "https://shschil.people.clemson.edu/final/assets/Deluxe_Barn.png"></td>
+            <td>Deluxe Barn</td>
+            <td>Big Barn Upgrade
+            <p>Houses 12 barn-dwelling animals. Allows animals to give birth. Comes with an auto-feed system. Unlocks Sheep and Pigs.</p></td>
+            <td>Cows, Goats, Sheep, Pigs</td>
+            <td><ul><li>25,000 gold</li><li>550 Wood</li><li>300 Stone</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cp_img"><img src = "https://shschil.people.clemson.edu/final/assets/Smallcoop.png"></td>
+            <td>Coop</td>
+            <td>Houses 4 coop-dwelling animals.</td>
+            <td>Chickens</td>
+            <td><ul><li>4,000 gold</li><li>300 Wood</li><li>100 Stone</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cp_img"><img src = "https://shschil.people.clemson.edu/final/assets/Smallbigcoop.png"></td>
+            <td>Big Coop</td>
+            <td>Coop Upgrade
+            <p>Houses 8 coop-dwelling animals. Comes with an incubator. Unlocks Ducks and Dinosaurs.</p></td>
+            <td>Chickens, Ducks, Dinosaurs</td>
+            <td><ul><li>10,000 gold</li><li>400 Wood</li><li>150 Stone</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cp_img"><img src = "https://shschil.people.clemson.edu/final/assets/Deluxe_Coop.png"></td>
+            <td>Deluxe Coop</td>
+            <td>Big Coop Upgrade
+            <p>Houses 12 coop-dwelling animals. Comes with an auto-feed system. Unlocks Rabbits.</p></td>
+            <td>Chickens, Ducks, Dinosaurs, Rabbits</td>
+            <td><ul><li>20,000 gold</li><li>500 Wood</li><li>200 Stone</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cp_img"><img src = "https://shschil.people.clemson.edu/final/assets/Mill.png"></td>
+            <td>Mill</td>
+            <td>Allows you to create flower from wheat and sugar from beets.</td>
+            <td></td>
+            <td><ul><li>2,500 gold</li><li>150 Wood</li><li>50 Stone</li><li>4 Cloth</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cp_img"><img src = "https://shschil.people.clemson.edu/final/assets/Shed.png"></td>
+            <td>Shed</td>
+            <td>An empty building. Fill it with whatever you want. The interior can be decorated.</td>
+            <td></td>
+            <td><ul><li>15,000 gold</li><li>300 Wood</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cp_img"><img src = "https://shschil.people.clemson.edu/final/assets/Silo.png"></td>
+            <td>Silo</td>
+            <td>Allows you to cut and store grass for feed. Holds up to 240 pieces of hay.</td>
+            <td></td>
+            <td><ul><li>100 gold</li><li>100 Stone</li><li>10 Clay</li><li>5 Copper Bar</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cp_img"><img src = "https://shschil.people.clemson.edu/final/assets/Slime_Hutch.png"></td>
+            <td>Slime Hutch</td>
+            <td>Raise up to 20 Slimes. Fill water troughs and Slimes will create slime balls.</td>
+            <td>Slimes</td>
+            <td><ul><li>12,000 gold</li><li>450 Wood</li><li>200 Stone</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cp_img"><img src = "https://shschil.people.clemson.edu/final/assets/Horse_Stable.png"></td>
+            <td>Stable</td>
+            <td>Allows you to keep and ride a horse. Horse included.</td>
+            <td>Horse</td>
+            <td><ul><li>10,000 gold</li><li>100 Hardwood</li><li>5 Iron Bar</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cp_img"><img src = "https://shschil.people.clemson.edu/final/assets/Well.png"></td>
+            <td>Well</td>
+            <td>Provides a place for you to refill your watering can.</td>
+            <td></td>
+            <td><ul><li>1,000 gold</li><li>75 Stone</li></ul></td>
+          </tr>
+        </table>
+
+        <p><center><a href = "https://shschil.people.clemson.edu/final/farm.html#buildings">[return to top of section]</a></center></p>
+    </div>
+  </div>
+
+          <div class="w3-row w3-padding-64" id = "cave">
+            <div class="w3-twothird w3-container">
+              <h1 class="w3-text-teal">The Cave</h1>
+              <p>Once your total earnings reaches 25,000 gold, Demetrius meets you at your door the next day. He states that he is working on research and asks if you wouldn't mind if he used your cave.
+              He gives the Player the option to either have fruit bats in their cave, or install plots for growing various types of mushrooms.</p>
+
+              <p>Picking fruit bats will cause a random druit (from 4 fruits) to be placed in the cave, while picking the mushrooms will cause Demetrius to build 6 plots for growing mushrooms, and will cause 5 different types of mushrooms to grow in the cave.</p>
+
+              <p><center><img src = "https://shschil.people.clemson.edu/final/assets/Cave_Mushrooms_rev.png"></center></p>
+            </div>
+          </div>
+
+            <div class="w3-row w3-padding-64" id = "greenhouse">
+              <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal">Farm Greenhouse</h1>
+                <p>The Greenhouse in the beginning is unusable, as the Player seems to assume it was destroyed by a storm. Completing the Pantry section of the Community Center will cause the Greenhouse to be restored, and be of use to the Player. Inside is a 12x10 plot of land for
+                growing crops, and a water trough to refill your Watering Can. Any seeds from any season may be planted here, even during winter. Buildings may not be placed inside of the Greenhouse.</p>
+
+                <p><center><img src = "https://shschil.people.clemson.edu/final/assets/Greenhouse.png"><img src = "https://shschil.people.clemson.edu/final/assets/Broken_Greenhouse.png"></center></p>
+              </div>
+              </div>
+            </div>
+
+  </div>
+
+  <!-- Pagination
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div>
+!-->
+
+  <!-- <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer> -->
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
